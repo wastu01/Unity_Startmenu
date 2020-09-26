@@ -4,37 +4,55 @@ using UnityEngine;
 
 public class MonsterController : MonoBehaviour
 {
-    
+    int hp = 0;
     public float Speed;
+    public int max_hp = 0;
+    public GameObject HP_Bar;
+
+    public int ATK;
 
     // Start is called before the first frame update
     void Start()
     {
-     
+        max_hp = 10;
+        hp = max_hp;
 
     }
 
     // Update is called once per frame
     void Update()
     {
+        float ratio = ((float)hp/(float)max_hp);
+        // new Vector3(Monster.transform.position.x,(Monster.transform.position.y)+3,0)
+       
+        HP_Bar.transform.localScale = new Vector3(ratio, HP_Bar.transform.localScale.y, HP_Bar.transform.localScale.z);
+
         this.gameObject.transform.position += new Vector3(-Speed / 250, 0, 0);
+
+
+        if (hp <= 0)
+        {
+            Destroy(this.gameObject);
+        }
+        print(hp);
+
     }
-    
-    
+
+
     //怪物攻擊動畫
     public void OnCollisionEnter2D(Collision2D collision)
     {
-       
-          if (collision.gameObject.name ==  "player(Clone)")
+
+        if (collision.gameObject.name == "player(Clone)")
 
         {
-             print("C:" + collision.gameObject.name); 
-            
-        this.gameObject.transform.position += new Vector3(0,0,0);
+            print("C:" + collision.gameObject.name);
 
-              Speed = 0;
 
-    
+
+            Speed = 0;
+           
+
 
         }
 
@@ -45,15 +63,26 @@ public class MonsterController : MonoBehaviour
 
     public void OnCollisionStay2D(Collision2D collision)
     {
-        if (collision.gameObject.name ==  "player(Clone)")
+        if (collision.gameObject.name == "player(Clone)")
         {
 
 
-            print("MonstererATK:" + collision.gameObject.name); 
-
+            print("MonstererATK:" + collision.gameObject.name);
+             hp -= 1;
         }
-        
+
     }
+
+    public void OnCollisionExit(Collision other)
+    {
+
+        if (other.gameObject.tag == "Player")
+        {
+            Speed = 2;
+            this.gameObject.transform.position += new Vector3(-Speed / 250, 0, 0);
+        }
+    }
+
 
 
 }

@@ -28,6 +28,6 @@ public class Onclick : MonoBehaviour
     {
         GameObject ClonePlayer01 = (GameObject)Instantiate(Character01, PlayerTower.transform.position, new Quaternion(0, 0, 0, 0));
         print("角色：死侍");
-        // transform.position = new Vector2(0, 0);//點擊時回到(0,0)
+       
     }
 }

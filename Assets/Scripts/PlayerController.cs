@@ -24,13 +24,23 @@ public class PlayerController : MonoBehaviour
     //Player01攻擊動畫
     public void OnCollisionEnter2D(Collision2D OBJ)
     {
-        if (OBJ.gameObject.name == "Monster(Clone)")
+        if (OBJ.gameObject.name == "Monster01(Clone)")
         {
 
-            print("A:" + OBJ.gameObject.name);
+            print("Meet:" + OBJ.gameObject.name);
             Speed = 0;
 
         }
+        if (OBJ.gameObject.name == "wall(Clone)")
+        {
+
+            print("Final:" + OBJ.gameObject.name);
+            Speed = 0;
+            
+
+        }
+
+
 
 
 
