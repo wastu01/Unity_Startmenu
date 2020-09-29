@@ -1,11 +1,9 @@
 fileFormatVersion: 2
-guid: bd7141f3e7dee47129d298023c2c13f8
+guid: db3a1fa21d4c64d838d14925b0141cdf
 MonoImporter:
   externalObjects: {}
   serializedVersion: 2
-  defaultReferences:
-  - Character01: {instanceID: 0}
-  - PlayerTower: {instanceID: 0}
+  defaultReferences: []
   executionOrder: 0
   icon: {instanceID: 0}
   userData: 

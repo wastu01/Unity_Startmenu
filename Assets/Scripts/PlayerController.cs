@@ -49,7 +49,7 @@ public class PlayerController : MonoBehaviour
     //Player攻擊
     public void OnCollisionStay2D(Collision2D OBJ)
     {
-        if (OBJ.gameObject.name == "Monster(Clone)")
+        if (OBJ.gameObject.name == "Monster01(Clone)")
         {
 
             print("PlayerATK:" + OBJ.gameObject.name);

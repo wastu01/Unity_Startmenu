@@ -23,7 +23,7 @@ public class MonsterController : MonoBehaviour
     void Update()
     {
         float ratio = ((float)hp/(float)max_hp);
-        // new Vector3(Monster.transform.position.x,(Monster.transform.position.y)+3,0)
+        
        
         HP_Bar.transform.localScale = new Vector3(ratio, HP_Bar.transform.localScale.y, HP_Bar.transform.localScale.z);
 
@@ -34,7 +34,7 @@ public class MonsterController : MonoBehaviour
         {
             Destroy(this.gameObject);
         }
-        print(hp);
+        // print(hp);
 
     }
 
@@ -46,7 +46,7 @@ public class MonsterController : MonoBehaviour
         if (collision.gameObject.name == "player(Clone)")
 
         {
-            print("C:" + collision.gameObject.name);
+            print("Enemy meet:" + collision.gameObject.name);
 
 
 

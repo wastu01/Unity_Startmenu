@@ -13,7 +13,6 @@ GameObject:
   - component: {fileID: -3277582205445185506}
   - component: {fileID: 3337954811726552616}
   - component: {fileID: 189450058882339784}
-  - component: {fileID: 5483416588944548721}
   m_Layer: 9
   m_Name: Monster
   m_TagString: spider
@@ -99,7 +98,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Monster: {fileID: 5864442023429252347}
-  HP_Bar: {fileID: 1132532168935155376, guid: 8cd861e44d9454ec3b555a977268d5d6, type: 3}
 --- !u!61 &3337954811726552616
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -147,19 +145,3 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
---- !u!114 &5483416588944548721
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5864442023429252347}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d5c4a5ac6d6f041698afdbcaf37250d2, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  Speed: 0
-  max_hp: 0
-  HP_Bar: {fileID: 3136948809663029672, guid: 057ce0ac2f9a14dd8a82fbd0f7f71b74, type: 3}
-  ATK: 0

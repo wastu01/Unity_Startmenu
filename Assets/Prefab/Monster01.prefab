@@ -9,12 +9,12 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7742523160961393327}
+  - component: {fileID: 4277340922246606314}
   - component: {fileID: 9152641310006347118}
   - component: {fileID: 6419851077662953651}
   - component: {fileID: 8494958154690190675}
-  - component: {fileID: 4277340922246606314}
   m_Layer: 9
-  m_Name: Monster 1
+  m_Name: Monster01
   m_TagString: spider
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -35,6 +35,22 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &4277340922246606314
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2749313771965622880}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d5c4a5ac6d6f041698afdbcaf37250d2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Speed: 5
+  max_hp: 0
+  HP_Bar: {fileID: 1786788301035384647}
+  ATK: 0
 --- !u!212 &9152641310006347118
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -133,22 +149,6 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
---- !u!114 &4277340922246606314
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2749313771965622880}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d5c4a5ac6d6f041698afdbcaf37250d2, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  Speed: 3
-  max_hp: 0
-  HP_Bar: {fileID: 1786788301035384647}
-  ATK: 0
 --- !u!1001 &3806474023919526686
 PrefabInstance:
   m_ObjectHideFlags: 0
